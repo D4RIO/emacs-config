@@ -294,6 +294,7 @@ If REPOSITORY is specified, use that."
   (eldoc-mode +1)
   (tide-hl-identifier-mode +1)
   (company-mode +1)
+  ;; ---------- Keybindings más sencillos para TIDE
   (define-key js-mode-map (kbd "C-.") 'tide-jump-to-definition)
   (define-key js-mode-map (kbd "C-,") 'tide-jump-back)
   )
@@ -302,14 +303,6 @@ If REPOSITORY is specified, use that."
 
 ;; CUSTOM: variable flycheck-javascript-standard-executable a "/usr/bin/standardx"
 ;; para usar standardx como backend de flycheck
-
-
-;; ---------- Keybindings más sencillos para TIDE
-
-;; (global-unset-key (kbd "M-,"))
-;; (global-unset-key (kbd "M-."))
-;; (global-set-key   (kbd "C-,")    'tide-jump-back)
-;; (global-set-key   (kbd "C-.")    'tide-jump-to-definition)
 
 
 ;; ------------ JS y JSX - prettier-js (MELPA)
