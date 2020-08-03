@@ -207,6 +207,9 @@ If REPOSITORY is specified, use that."
 				      (move-beggining-of-line)
 				      (kill-region)
 				      (message "C-d C-a kill hasta el principio de la línea.")))
+(global-set-key   (kbd "C-d C-r")   (lambda () "Borra una región (kill)." (interactive)
+				      (kill-region)
+				      (message "C-d C-r kill sobre una región.")))
 (global-set-key   (kbd "C-d C-g")   'keyboard-quit)
 
 
