@@ -47,7 +47,6 @@
 ;;                                          from text by http://www.patorjk.com/software/taag/
 
 
-(add-to-list 'initial-frame-alist '(fullscreen . maximized))  ;  Iniciar con ventana maximizada
 (pop-to-buffer "*Messages*")
 (message "CARGANDO ARCHIVO DE CONFIGURACIóN PERSONALIZADO")
 (delete-other-windows)
@@ -92,9 +91,11 @@ If REPOSITORY is specified, use that."
 ;; ---------- Preferencias
 
 (setq x-select-enable-clipboard 1)                            ;  Usar clipboard de X para permitir copiar y pegar desde el escritorio
-(load "~/.emacs.d/linum-highlight-current-line-number.el")    ;  Modulo que usa linum-mode y resalta la línea actual
-(setq linum-format 'linum-highlight-current-line-number)      ;  Configura linum para usar el anterior
-(global-linum-mode)                                           ;  Inicia linum-mode
+;(load "~/.emacs.d/linum-highlight-current-line-number.el")    ;  Modulo que usa linum-mode y resalta la línea actual
+;(setq linum-format 'linum-highlight-current-line-number)      ;  Configura linum para usar el anterior
+(on-demand 'nlinum)
+(on-demand 'nlinum-relative)
+;(global-nlinum-relative-mode)                                 ;  Inicia linum-mode
 (display-time-mode)                                           ;  Muestra la hora en statusbar
 (on-demand 'doom-modeline)                                    ;  DOOM modeline es limpio y es eficiente 
 (doom-modeline-mode 1)                                        ;
@@ -211,6 +212,24 @@ If REPOSITORY is specified, use that."
 				      (kill-region)
 				      (message "C-d C-r kill sobre una región.")))
 (global-set-key   (kbd "C-d C-g")   'keyboard-quit)
+
+
+;; ---------- NAVEGACIÓN PARA MENTES MÁS SALUDABLES
+
+;; ---------- La navegación con 'p', 'n', 'b' y 'f' es incómoda
+
+(global-unset-key (kbd "C-b"))
+(global-unset-key (kbd "C-f"))
+(global-unset-key (kbd "C-p"))
+(global-unset-key (kbd "C-n"))
+
+
+;; Una propuesta de navegación más simple es usar las teclas
+
+(global-set-key   (kbd "C-i")   'previous-line) ; 'j', 'k', 'l' e 'i'
+(global-set-key	  (kbd "C-k")	'next-line);
+(global-set-key	  (kbd "C-l")	'forward-char)
+(global-set-key   (kbd "C-j")   'backward-char)
 
 
 
