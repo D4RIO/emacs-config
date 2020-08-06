@@ -14,6 +14,8 @@
    '("36ca8f60565af20ef4f30783aa16a26d96c02df7b4e54e9900a5138fb33808da" "dcdd1471fde79899ae47152d090e3551b889edf4b46f00df36d653adc2bf550d" "387b487737860e18cbb92d83a42616a67c1edfd0664d521940e7fbf049c315ae" "9685cefcb4efd32520b899a34925c476e7920725c8d1f660e7336f37d6d95764" "b7133876a11eb2ded01b4b144b45d9e7457f80dd5900c332241881ab261c50f4" "efbd20364f292a1199d291dfaff28cc1fd89fff5b38e314bd7e40121f5c465b4" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "25f77dacfe4208759955bc95970e90bf459dcc9bfd656a1704a753b80c6a402b" "b9e9ba5aeedcc5ba8be99f1cc9301f6679912910ff92fdf7980929c2fc83ab4d" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" default))
  '(display-time-default-load-average nil)
  '(display-time-format "%H:%M")
+ '(doom-modeline-github t)
+ '(doom-modeline-mode t)
  '(flycheck-check-syntax-automatically '(save idle-change mode-enabled))
  '(flycheck-gcc-include-path
    '("./dapi/dstring" "./dapi/dhashtable" "./dapi/dtrace" "./"))
@@ -24,6 +26,7 @@
  '(inhibit-startup-screen t)
  '(initial-buffer-choice nil)
  '(menu-bar-mode nil)
+ '(neo-window-fixed-size nil)
  '(nlinum-highlight-current-line t)
  '(nlinum-relative-redisplay-delay 0.01)
  '(org-bullets-bullet-list '("☯" "🌱" "🍁" "☃" "📌" "📎" "◉" "○" "✿" "✜" "◆"))
@@ -44,13 +47,18 @@
 --jsx-single-quote \"true\"
 --jsx-bracket-same-line \"true\"
 --print-width \"100\""))
+ '(select-enable-clipboard t)
  '(special-display-function 'display-buffer-same-window)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(x-select-enable-clipboard-manager t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(doom-modeline-bar ((t (:inherit highlight :background "deep sky blue"))))
+ '(doom-modeline-buffer-major-mode ((t (:foreground "gold"))))
+ '(doom-modeline-spc-face ((t nil)))
  '(powerline-active0 ((t (:inherit mode-line :background "AntiqueWhite4" :foreground "white"))))
  '(powerline-active1 ((t (:inherit mode-line :background "deep sky blue" :foreground "white"))))
  '(powerline-active2 ((t (:inherit mode-line :background "light gray" :foreground "DeepSkyBlue4")))))

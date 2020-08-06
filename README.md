@@ -1,4 +1,6 @@
-# EMACS LATAM #
+# MI CONFIGURACIÓN DE EMACS - LATAM #
+
+Mayormente para teclados español/latinoamérica.
 
 Consultas / sugerencias: <rodriguez.dario.a@gmail.com>
 
@@ -16,15 +18,15 @@ cp -rvp emacs-latam/.emacs.d ~
 emacs
 ```
 
-**ADVERTENCIA**: Esto sobreescribirá la configuración actual.
+**ADVERTENCIA**: Esto sobreescribe la configuración actual.
 
 
 ## Secuencias de borrar / cortar ##
 
 No soy un gran fan de las secuencias de teclado que emacs tiene predeterminadas.
 Muchas son particulares para teclados americanos y otras tantas no tienen mucho
-sentido (el tipo de secuencia de `C-x k` para cortar hasta el final de la línea
-aunque cortar una región sea `C-w` y borrar un carácter sea `C-d`).
+sentido. Es el caso de `C-x k` para cortar hasta el final de la línea, aunque
+cortar una región sea `C-w` y borrar un carácter sea `C-d`.
 
 Para solucionar esto, quité la secuencia `C-x k` y dejé una familia de
 secuencias de borrado/cortado (DEL) (la diferencia radica en que el cortado
@@ -47,4 +49,31 @@ secuencia tiene sentido porque se suma al uso de CTRL con las teclas de
 navegación, que se usa para navegar por palabras (adelante y atrás), o
 por párrafos (arriba y abajo).
 
+
+## Navegación latam (KOÑL) ##
+
+Tener la Ñ en el teclado es una ventaja cuando se tiene que elegir cómo navegar.
+
+La primer opción fue navegación tipo gamer: AWDS.
+
+La idea me atrajo, pero uso ',' y '.' para navegar a definiciones de función, y
+uso '{' y '}' para navegar por párrafos y páginas. Es decir, toda mi navegación
+es con la mano derecha, y uso la mano izquierda para acciones (De ahí que las
+secuencias más simples de C-d sean con a, e y c. Un poco C-d C-l funciona como
+un mecanismo de seguridad para evitar andar borrando líneas completas por error).
+
+Esto no es un problema si no se usa CTRL, pero pasar de una mano a la otra y
+mantener un CTRL presionado es un poco más complicado (usar el meñique puede ser
+muy malo, por eso otros dedos para manejar el CTRL muchas veces). Si se va a
+navegar por el código, entonces se mantiene la mano izquierda apartada, con uno
+o dos dedos sobre el CTRL. Después se decide que se va a borrar algo, ejecutar
+un comando, evaluar una expresión Lisp, guardar, etc., y es la mano derecha la
+que se aparta. Por lo menos esta es la idea, veamos qué tan cómodo es.
+
+| SECUENCIA |         ACCION |
+|----------:|---------------:|
+|     `C-k` |    Atrás (`<`) |
+|     `C-o` |   Arriba (`^`) |
+|     `C-ñ` | Adelante (`>`) |
+|     `C-l` |    Abajo (`v`) |
 
