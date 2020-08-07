@@ -77,3 +77,14 @@ que se aparta. Por lo menos esta es la idea, veamos qué tan cómodo es.
 |     `C-ñ` | Adelante (`>`) |
 |     `C-l` |    Abajo (`v`) |
 
+
+## Javascript / JSX ##
+
+Uso Emacs para JavaScript / JSX / React. Todavía tengo pocas mañas con esto,
+una de ellas proviene de TIDE:
+
+| SECUENCIA |                                                        ACCION |
+|----------:|--------------------------------------------------------------:|
+|     `C-.` |                              Ir a la definición de la función |
+|     `C-,` | Volver a la posición anterior (después de ver una definición) |
+
