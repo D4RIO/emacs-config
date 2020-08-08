@@ -80,11 +80,23 @@ que se aparta. Por lo menos esta es la idea, veamos qué tan cómodo es.
 
 ## Javascript / JSX ##
 
-Uso Emacs para JavaScript / JSX / React. Todavía tengo pocas mañas con esto,
-una de ellas proviene de TIDE:
+Uso Emacs para JavaScript / JSX / React. Todavía tengo pocas mañas con esto:
 
-| SECUENCIA |                                                        ACCION |
-|----------:|--------------------------------------------------------------:|
-|     `C-.` |                              Ir a la definición de la función |
-|     `C-,` | Volver a la posición anterior (después de ver una definición) |
+|    SECUENCIA |                                                        ACCION |
+|-------------:|--------------------------------------------------------------:|
+|        `C-.` |                              Ir a la definición de la función |
+|        `C-,` | Volver a la posición anterior (después de ver una definición) |
+|        `C-?` |                                 Buscar referencias al símbolo |
+| `C-<return>` |                                     Arreglar error (tide-fix) |
+
+
+## Markdown ##
+
+Redefinición de las combinaciones de avance por páginas. La navegación rápida
+en MD es preferentemente por título.
+
+| SECUENCIA |                                      ACCION |
+|----------:|--------------------------------------------:|
+|   `C-M-{` | Retroceder hasta el anterior título visible |
+|   `C-M-}` |     Avanzar hasta el próximo título visible |
 
