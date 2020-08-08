@@ -300,8 +300,10 @@ Si se especifica el repositorio 'repository', instalarlo desde ahí"
   (tide-hl-identifier-mode +1)
   (company-mode +1)
   ;; ---------- Keybindings más sencillos para TIDE
-  (define-key js-mode-map (kbd "C-.") 'tide-jump-to-definition)
-  (define-key js-mode-map (kbd "C-,") 'tide-jump-back)
+  (define-key js-mode-map (kbd "C-.")        'tide-jump-to-definition)
+  (define-key js-mode-map (kbd "C-,")        'tide-jump-back)
+  (define-key js-mode-map (kbd "C-?")        'tide-references)
+  (define-key js-mode-map (kbd "C-<return>") 'tide-fix)
   )
 (setq company-tooltip-align-annotations t)
 (add-hook 'js-mode-hook #'setup-tide-mode)
