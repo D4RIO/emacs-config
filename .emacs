@@ -284,8 +284,12 @@ Si se especifica el repositorio 'repository', instalarlo desde ahí"
 
 
 (add-hook 'markdown-mode-hook (lambda ()
-				(define-key markdown-mode-map (kbd "C-M-{") 'markdown-previous-visible-heading)
-				(define-key markdown-mode-map (kbd "C-M-}") 'markdown-next-visible-heading)
+				(define-key markdown-mode-map (kbd "C-M-{")        'markdown-previous-visible-heading)
+				(define-key markdown-mode-map (kbd "C-M-}")        'markdown-next-visible-heading)
+				(define-key markdown-mode-map (kbd "C-s-<down>")   'markdown-table-move-row-down)
+				(define-key markdown-mode-map (kbd "C-s-<up>")     'markdown-table-move-row-up)
+				(define-key markdown-mode-map (kbd "C-s-<left>")   'markdown-table-move-column-left)
+				(define-key markdown-mode-map (kbd "C-s-<right>")  'markdown-table-move-column-right)
 				)
 	  )
 

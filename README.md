@@ -95,8 +95,12 @@ Uso Emacs para JavaScript / JSX / React. Todavía tengo pocas mañas con esto:
 Redefinición de las combinaciones de avance por páginas. La navegación rápida
 en MD es preferentemente por título.
 
-| SECUENCIA |                                      ACCION |
-|----------:|--------------------------------------------:|
-|   `C-M-{` | Retroceder hasta el anterior título visible |
-|   `C-M-}` |     Avanzar hasta el próximo título visible |
+|     SECUENCIA |                                              ACCION |
+|--------------:|----------------------------------------------------:|
+|       `C-M-{` |         Retroceder hasta el anterior título visible |
+|       `C-M-}` |             Avanzar hasta el próximo título visible |
+|  `C-s-<down>` |                En tablas, mover fila una fila abajo |
+|    `C-s-<up>` |               En tablas, mover fila una fila arriba |
+|  `C-s-<left>` | En tablas, mover columna una columna a la izquierda |
+| `C-s-<right>` |   En tablas, mover columna una columna a la derecha |
 
