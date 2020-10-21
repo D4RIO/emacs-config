@@ -333,9 +333,15 @@ Si se especifica el repositorio 'repository', instalarlo desde ahí"
   (define-key js-mode-map (kbd "C-,")        'tide-jump-back)
   (define-key js-mode-map (kbd "C-?")        'tide-references)
   (define-key js-mode-map (kbd "C-<return>") 'tide-fix)
+  ;; ----------------------------------------------
+  (define-key typescript-mode-map (kbd "C-.")        'tide-jump-to-definition)
+  (define-key typescript-mode-map (kbd "C-,")        'tide-jump-back)
+  (define-key typescript-mode-map (kbd "C-?")        'tide-references)
+  (define-key typescript-mode-map (kbd "C-<return>") 'tide-fix)
   )
 (setq company-tooltip-align-annotations t)
 (add-hook 'js-mode-hook #'setup-tide-mode)
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
 
 ;; CUSTOM: variable flycheck-javascript-standard-executable a "/usr/bin/standardx"
 ;; para usar standardx como backend de flycheck
@@ -348,7 +354,6 @@ Si se especifica el repositorio 'repository', instalarlo desde ahí"
 			  (message "PRETTIER-JS cambiará el estilo del código siempre al guardar.")
 			  (prettier-js-mode))
 	  )
-
 
 ;; CUSTOM: variable prettier-js-args a
 ;;        --trailing-comma "none"
