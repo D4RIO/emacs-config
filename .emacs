@@ -91,6 +91,7 @@ Si se especifica el repositorio 'repository', instalarlo desde ahí"
 (neotree-show)
 (on-demand 'magit)					      ;  Modo GIT
 (on-demand 'magit-diff-flycheck)			      ;  Flycheck sobre los diff (ve errores durante la revisión)
+(setq-default indent-tabs-mode nil)                           ;  Indentar saludablemente con espacios
 
 
 ;; ---------- Paquetes favoritos
